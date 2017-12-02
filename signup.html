@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Sign Up page</title>
+<script>
+function submitData (){
+
+
+debugger;
+var fname = document.getElementById("Fname").value;
+var lname = document.getElementById("Lname").value;
+var uname = document.getElementById("Uname").value;
+var pwd = document.getElementById("pwd").value;
+var cpwd = document.getElementById("cpwd").value;
+var result = true;
+
+if(fname == '')
+{
+	alert("Enter First Name");
+	result = false;
+}
+else if(lname == '')
+{
+	alert("Enter Last Name");
+	result = false;
+}
+else if(uname == '')
+{
+	alert("Enter User ID");
+	result = false;
+	
+}
+else if(pwd == '')
+{
+	alert("Password cannot be empty");
+	result = false;
+}
+else if(cpwd == '')
+{
+	alert("Confirm Password cannot be empty");
+	result = false;
+}
+else if((pwd === cpwd)==false)
+{
+	alert("Both passwords should match");
+	result = false;
+
+}
+if(result == true)
+{
+	alert("Account Created Successfully ");
+}
+}
+</script>
+<style>
+
+#Fname,#Lname{
+width:80px;
+}
+#Bday_day{
+width:40px;
+}
+
+#Bday_year{
+width:45px;
+}
+#sform{
+
+background-color:#f5f5f5;
+padding: 10px 10px 10px 10px;
+
+width:300px;
+}
+
+
+</style>
+</head>
+
+<body>
+<div style="width:100%">
+<div style="width:38%;dislpay:inline-block;float:left;">&nbsp;</div>
+<div style="width:38%;dislpay:inline-block;float:left;">&nbsp;</div>
+<div id="sform" style="width:20%;display:inline-block;float:left;">
+<table>
+<tr>
+
+<td><b>Name<b><br/>
+<input id="Fname" type="text" placeholder="First" required/> 
+<input id="Lname" type="text" placeholder="Last" required/> <td>
+</tr>
+<tr>
+<td>
+<b>Chose your username </b><br/>
+<input id="Uname" type="text" placeholder="Username" /><span>@gmail.com</span>
+</td>
+</tr>
+
+<tr>
+<td>
+<b>Create a Password</b><br/>
+<input id="pwd" type="password" placeholder="password" required/> 
+</td>
+</tr>
+<tr>
+<td><b>Confirm your password</b><br/>
+<input id="cpwd" type="password" placeholder="Confirm password" required/> 
+</td>
+</tr>
+
+
+<tr>
+<td><b>Birthday</b><br/>
+<select id="Bday_month" placeholder="Month">
+  <option value="January">January</option>
+  <option value="February">February</option>
+  <option value="March">March</option>
+  <option value="April">April</option>
+  <option value="May">May</option>
+  <option value="June">June</option>
+  <option value="July">July</option>
+  <option value="August">August</option>
+  <option value="September">September</option>
+  <option value="October">October</option>
+  <option value="November">November</option>
+  <option value="December">December</option>
+</select>
+<input class="Bday_day" id="Bday_day" type="number" placeholder="Day" min="1" max="31" required/> <input id="Bday_year" min="1920" type="number" placeholder="Year" required/>
+</td>
+</tr>
+
+
+
+
+</table>
+<br/><br/>
+<input type="button" value="Create Account" onclick="submitData()">
+</div>
+</div>
+
+
+
+
+</body>
+
+</html>
+
